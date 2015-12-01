@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="application/javascript" src="./utils.js"></script>
+    <canvas id="game-canvas" width="1254" height="930"></canvas>
+    <script type="application/javascript" src="./movingObject.js"></script>
+    <script type="application/javascript" src="./asteroid.js"></script>
+    <script type="application/javascript" src="./game.js"></script>
+    <script type="application/javascript" src="./gameView.js"></script>
+    <script>
+      var canvasEl = document.getElementById("game-canvas");
+      var ctx = canvasEl.getContext("2d");
+      var game = new Asteroids.Game;
+      var view = new Asteroids.GameView(game, ctx);
+      view.start();
+    </script>
+  </body>
+</html>

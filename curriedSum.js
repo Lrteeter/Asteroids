@@ -15,8 +15,12 @@ var curriedSum = function (numArgs) {
   return _curriedSum;
 };
 
+// var getFirstArg = curriedSum(3);
+// var getSecondArg = getFirstArg(1);
+// var getThirdArgAndSum = getSecondArg(2);
+// console.log(getThirdArgAndSum(3))
 var sum = curriedSum(4);
-// console.log(sum(5)(30)(20)(1));
+console.log(sum(5)(30)(20)(1));
 
 Function.prototype.curry = function(numArgs) {
   var fn = this;
